@@ -1,12 +1,8 @@
-var extent = require('./extent'),
-    bboxPolygon = require('./bboxPolygon')
-t.bboxPolygon = bboxPolygon
-t.extent = extent
+var extent = require('turf-extent')
+var bboxPolygon = require('turf-bbox-polygon')
 
 module.exports = function(features, done){
-  t.extent(features, function(err, bbox){
-    t.bboxPolygon(bbox, function(err, poly){
-      done(err, poly)
-    })
-  })
+  var bbox = extent(features)
+  var poly = bboxPolygon(bbox)
+  return poly
 }
