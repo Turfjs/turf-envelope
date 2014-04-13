@@ -1,4 +1,3 @@
-var t = {}
 var extent = require('./extent'),
     bboxPolygon = require('./bboxPolygon')
 t.bboxPolygon = bboxPolygon

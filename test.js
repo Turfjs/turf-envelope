@@ -1,23 +1,10 @@
 var test = require('tape')
+var envelope = require('./')
+var fc = require('./geojson/fc.json')
 
 test(function(t){
-  
-
+  var enveloped = envelope(features)
+  t.ok(enveloped)
+  t.equal(enveloped.geometry.type, 'Polygon')
   t.end()
 })
-
-var t = require('../index'),
-
-describe('envelope', function(){
-  it('should return a polygon that represents the bbox around a feature or feature collection.', function(done){
-    t.load(__dirname+'/testIn/FeatureCollection.geojson', function(err, features){
-      t.envelope(features, function(err, poly){
-        if(err) throw err
-        poly.should.be.ok
-        poly.geometry.type.should.equal('Polygon')
-        poly.geometry.coordinates.should.be.ok
-        done()
-      })
-    })
-  })
-}) 
