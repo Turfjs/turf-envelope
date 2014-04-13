@@ -1,3 +1,11 @@
+var test = require('tape')
+
+test(function(t){
+  
+
+  t.end()
+})
+
 var t = require('../index'),
 
 describe('envelope', function(){
