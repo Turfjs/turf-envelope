@@ -4,6 +4,26 @@ turf-envelope
 
 Takes a Feature or FeatureCollection and returns a rectangular polygon feature that encompasses all vertices.
 
+###Install
+
+```sh
+npm install turf-envelope
+```
+
+###Parameters
+
+|name|description|
+|---|---|
+|fc|A FeatureCollection|
+
+###Usage
+
+```js
+envelope(fc)
+```
+
+###Example
+
 ```javascript
 var envelope = require('turf-envelope')
 var point = require('turf-point')
