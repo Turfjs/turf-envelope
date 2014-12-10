@@ -1,5 +1,5 @@
 var envelope = require('./');
-var Benchmark = require('Benchmark');
+var Benchmark = require('benchmark');
 var fs = require('fs');
 
 var fixture = require('./geojson/fc.js');
