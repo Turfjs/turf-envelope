@@ -15,7 +15,10 @@ var bboxPolygon = require('turf-bbox-polygon');
 *
 * var enveloped = turf.envelope(fc);
 *
-* //=enveloped
+* var result = turf.featurecollection(
+* 	fc.features.concat(enveloped));
+*
+* //=result
 */
 
 module.exports = function(features, done){
