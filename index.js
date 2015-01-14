@@ -5,8 +5,8 @@ var bboxPolygon = require('turf-bbox-polygon');
 * Takes a {@link Feature} or {@link FeatureCollection} and returns a rectangular {@link Polygon} feature that encompasses all vertices.
 *
 * @module turf/envelope
-* @param {FeatureCollection} fc - a FeatureCollection of any type
-* @return {Polygon} enveloped - a rectangular Polygon feature that encompasses all vertices
+* @param {FeatureCollection} fc a FeatureCollection of any type
+* @return {Polygon} a rectangular Polygon feature that encompasses all vertices
 * @example
 * var pt1 = turf.point(-75.343, 39.984, {name: 'Location A'});
 * var pt2 = turf.point(-75.833, 39.284, {name: 'Location B'});
