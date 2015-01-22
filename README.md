@@ -1,40 +1,50 @@
-turf-envelope
-=============
-[![Build Status](https://travis-ci.org/Turfjs/turf-envelope.svg?branch=master)](https://travis-ci.org/Turfjs/turf-envelope)
+# turf-envelope
 
-Takes a Feature or FeatureCollection and returns a rectangular polygon feature that encompasses all vertices.
+[![build status](https://secure.travis-ci.org/Turfjs/turf-envelope.png)](http://travis-ci.org/Turfjs/turf-envelope)
 
-###Install
+turf envelope module
 
-```sh
-npm install turf-envelope
-```
 
-###Parameters
+### `turf.envelope(fc)`
 
-|name|description|
-|---|---|
-|fc|A FeatureCollection|
+Takes a Feature or FeatureCollection and returns a rectangular Polygon feature that encompasses all vertices.
 
-###Usage
+
+### Parameters
+
+| parameter | type              | description                     |
+| --------- | ----------------- | ------------------------------- |
+| `fc`      | FeatureCollection | a FeatureCollection of any type |
+
+
+### Example
 
 ```js
-envelope(fc)
+var fc = turf.featurecollection([
+ turf.point([-75.343, 39.984], {name: 'Location A'}),
+ turf.point([-75.833, 39.284], {name: 'Location B'}),
+ turf.point([-75.534, 39.123], {name: 'Location C'})
+]);
+
+var enveloped = turf.envelope(fc);
+
+var result = turf.featurecollection(
+	fc.features.concat(enveloped));
+
+//=result
 ```
 
-###Example
+## Installation
 
-```javascript
-var envelope = require('turf-envelope')
-var point = require('turf-point')
-var featurecollection = require('turf-featurecollection')
+Requires [nodejs](http://nodejs.org/).
 
-var pt1 = point(-75.343, 39.984, {name: 'Location A'})
-var pt2 = point(-75.833, 39.284, {name: 'Location B'})
-var pt3 = point(-75.534, 39.123, {name: 'Location C'})
-var fc = featurecollection([pt1, pt2, pt3])
-
-var enveloped = envelope(fc)
-
-console.log(envelopePoly)
+```sh
+$ npm install turf-envelope
 ```
+
+## Tests
+
+```sh
+$ npm test
+```
+
