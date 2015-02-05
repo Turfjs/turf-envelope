@@ -5,6 +5,7 @@ var bboxPolygon = require('turf-bbox-polygon');
  * Takes a {@link Feature} or {@link FeatureCollection} and returns a rectangular {@link Polygon} feature that encompasses all vertices.
  *
  * @module turf/envelope
+ * @category measurement
  * @param {FeatureCollection} fc a FeatureCollection of any type
  * @return {Polygon} a rectangular Polygon feature that encompasses all vertices
  * @example
