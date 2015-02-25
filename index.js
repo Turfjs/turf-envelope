@@ -2,12 +2,12 @@ var extent = require('turf-extent');
 var bboxPolygon = require('turf-bbox-polygon');
 
 /**
- * Takes a {@link Feature} or {@link FeatureCollection} and returns a rectangular {@link Polygon} feature that encompasses all vertices.
+ * Takes any number of features and returns a rectangular {@link Polygon} feature that encompasses all vertices.
  *
  * @module turf/envelope
  * @category measurement
- * @param {FeatureCollection} fc a FeatureCollection of any type
- * @return {Polygon} a rectangular Polygon feature that encompasses all vertices
+ * @param {FeatureCollection<(Point|LineString|Polygon)>} fc input features
+ * @return {Feature<Polygon>} a rectangular Polygon feature that encompasses all vertices
  * @example
  * var fc = {
  *   "type": "FeatureCollection",
