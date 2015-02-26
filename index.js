@@ -6,7 +6,7 @@ var bboxPolygon = require('turf-bbox-polygon');
  *
  * @module turf/envelope
  * @category measurement
- * @param {FeatureCollection<(Point|LineString|Polygon)>} fc input features
+ * @param {FeatureCollection} fc input features
  * @return {Feature<Polygon>} a rectangular Polygon feature that encompasses all vertices
  * @example
  * var fc = {
