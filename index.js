@@ -54,7 +54,7 @@ var bboxPolygon = require('turf-bbox-polygon');
  * //=result
  */
 
-module.exports = function(features) {
+module.exports = function (features) {
   var bbox = extent(features);
   var poly = bboxPolygon(bbox);
   return poly;
